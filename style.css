@@ -1,0 +1,214 @@
+/*
+================================ 
+Fonts
+================================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+/*
+================================ 
+Variables
+================================
+*/
+
+:root{
+  /* darker shades */
+  --primary3: #ff6666;
+  --primary4: #ff3333;
+
+  /* primary colors */
+  --primary-5: #ff0000;
+  
+  /* lighter shades */
+  --primary6: #cc0000;
+}
+
+/*
+================================ 
+CSS Resets
+================================
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+
+.berk-parallax{
+  background-image: url(./images/jeremy-huang-dc94LHM58cA-unsplash.jpg);
+  min-height: 1500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar{
+  padding: 15px 20px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255, .3);
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
+}
+
+.navbar a:visited{
+  color: var(--primary-5);
+}
+
+.navbar a:hover, .list a:hover{
+  color: var(--primary-5);
+  text-decoration: underline;
+}
+
+.logo{
+  font-family: 'Zeyada', cursive;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-5);
+}
+
+a{
+  color: var(--primary-5);
+}
+
+.list{
+  display: flex;
+}
+
+.list li{
+  padding-left: 15px;
+}
+
+.title {
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  display: grid;
+}
+
+.title-top{
+  display: flex;
+  justify-content: center;
+
+}
+.title-top h1{
+  margin: 0;
+}
+
+.fa-heart{
+  color: var(--primary-5);
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.underline{
+  background-color: var(--primary-5);
+  width: 90%;
+  height: .25rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s linear;
+}
+
+.card, .blurb {
+  padding: 10px;
+}
+
+img{
+  width: 300px;
+}
+
+.img-container{
+  padding-bottom: 10px;
+}
+
+#down-btn, #left-btn, #right-btn{
+  background: transparent;
+  border-color: transparent;
+  color: var(--primary-5);
+}
+
+.chevron-btn{
+  width: 75px;
+  height: 75px;
+}
+
+#down-btn:hover, #left-btn:hover, #right-btn:hover{
+  cursor: pointer;
+  /* color: var(--primary4); */
+  opacity: 0.5;
+  transition: all ease 0.2s;
+}
+
+.about-us{
+  height: 1000px;
+}
+
+#block{
+  width: 50px;
+  height: 50px;
+  background: var(--primary-5);
+}
+
+.slider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#active-image{
+  width: 300px;
+}

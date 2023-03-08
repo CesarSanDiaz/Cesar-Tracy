@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+</head>
+<body>
+
+  <section class="berk-parallax">
+    <div class="navbar">
+      <div class="logo">
+        <a href="#">Cesar <span>+</span> Tracy</a>
+      </div>
+      <ul class="list">
+        <li><a href="#about-us-section">About Us</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="title">
+      <div class="title-top">
+        <i class="fas fa-heart"></i>
+        <h1 class="ml16" >Our life album</h1>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="underline"></div>
+    </div>
+    <div class="card">
+      <div class="img-container">
+        <img src="./images/marriage-crop.png" alt="headshot">
+      </div>
+      <h2>Cesar + Tracy</h2>
+      <div class="blurb">
+        <h3>Hi there, Welcome to our page!</h3>
+        <h3>This is a collection of our life together in pictures.</h3>
+      </div>
+    
+      <div class="btn-container">
+        <button id="down-btn">
+          <i class="chevron-btn" data-feather="chevrons-down"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us" id="about-us-section">
+    <div class="title">
+      <div class="title-top">
+          <i class="fas fa-heart"></i>
+          <h1>About Us</h1>
+          <i class="fas fa-heart"></i>
+      </div>
+      <div class="underline"></div>
+    </div>
+
+    <div class="container">
+      <div class="slider">
+        <div class="btn-container">
+          <button id="left-btn">
+            <i class="chevron-btn" data-feather="chevrons-left"></i>
+          </button>
+        </div>
+        <img id="active-image" src="images/img_avatar.png" alt="">
+        <div class="btn-container">
+          <button id="right-btn">
+            <i class="chevron-btn" data-feather="chevrons-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+
+  </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
