@@ -161,13 +161,20 @@ a{
   margin-left: 5px;
 }
 
-.underline{
+#underline, #underline-aboutUs{
   background-color: var(--primary-5);
-  width: 90%;
   height: .25rem;
   margin-left: auto;
   margin-right: auto;
   transition: all 1s linear;
+}
+
+#underline {
+  width: 22.5rem;
+}
+
+#underline-aboutUs{
+  width: 14rem;
 }
 
 .card, .blurb {
@@ -188,6 +195,10 @@ img{
   color: var(--primary-5);
 }
 
+#left-btn, #right-btn{
+  padding: 0 25px;
+}
+
 .chevron-btn{
   width: 75px;
   height: 75px;
@@ -199,6 +210,10 @@ img{
   opacity: 0.5;
   transition: all ease 0.2s;
 }
+
+/* .btn-container{
+  padding: 300px;
+} */
 
 .about-us{
   justify-content: center;
@@ -214,7 +229,7 @@ img{
 .slider {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 #active-image{
@@ -238,5 +253,11 @@ img{
   };
   #active-image{
     width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  #active-image{
+    width: 35%;
   }
 }
