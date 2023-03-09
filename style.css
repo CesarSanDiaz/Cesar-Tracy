@@ -84,13 +84,21 @@ p {
   margin-bottom: 1.25rem;
 }
 
+/*
+================================ 
+styles
+================================
+*/
+
 .berk-parallax{
   background-image: url(./images/jeremy-huang-dc94LHM58cA-unsplash.jpg);
-  min-height: 1500px;
+  min-height: 1000px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .navbar{
@@ -136,7 +144,6 @@ a{
   justify-content: center;
   padding: 10px;
   align-items: center;
-  display: grid;
 }
 
 .title-top{
@@ -194,7 +201,8 @@ img{
 }
 
 .about-us{
-  height: 1000px;
+  justify-content: center;
+  /* overflow: hidden; */
 }
 
 #block{
@@ -203,12 +211,32 @@ img{
   background: var(--primary-5);
 }
 
-.slider{
+.slider {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #active-image{
-  width: 300px;
+  width: 50%;
+}
+
+@media (min-width: 440px) {
+  .berk-parallax {
+    background-image: url(./images/jeremy-huang-dc94LHM58cA-unsplash.jpg);
+    min-height: 1500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  };
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px green solid;
+  };
+  #active-image{
+    width: 50%;
+  }
 }
