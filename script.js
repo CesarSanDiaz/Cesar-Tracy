@@ -68,11 +68,16 @@ function openMenu() {
   siteNav.setAttribute('data-state', 'opened');
 }
 
-function openMenu() {
-  menuToggle.setAttribute('aria-expanded', 'flase');
-  siteNav.setAttribute('data-state', 'closing');
+// function closeMenu() {
+//   menuToggle.setAttribute('aria-expanded', 'false');
+//   siteNav.setAttribute('data-state', 'closing');
 
-  menuToggle.addEventListener('click', () => {
-    siteNav.setAttribute('data-state', 'closed');
-  })
+//   menuToggle.addEventListener('click', () => {
+//     siteNav.setAttribute('data-state', 'closed');
+//   }, {once: true})
+// }
+
+function closeMenu() {
+  menuToggle.setAttribute('aria-expanded', 'false');
+  siteNav.setAttribute('data-state', 'closed');
 }
