@@ -52,3 +52,27 @@ rightBtnElement.addEventListener('click', () => {
   }
   setActiveImage(images[currentIndex]);
 })
+
+// Hamberger button
+
+const menuToggle = document.querySelector('.ham-btn');
+const siteNav = document.querySelector('.primary-navigation');
+
+menuToggle.addEventListener('click', () => {
+  isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  isOpen ? closeMenu() : openMenu();
+})
+
+function openMenu() {
+  menuToggle.setAttribute('aria-expanded', 'true');
+  siteNav.setAttribute('data-state', 'opened');
+}
+
+function openMenu() {
+  menuToggle.setAttribute('aria-expanded', 'flase');
+  siteNav.setAttribute('data-state', 'closing');
+
+  menuToggle.addEventListener('click', () => {
+    siteNav.setAttribute('data-state', 'closed');
+  })
+}

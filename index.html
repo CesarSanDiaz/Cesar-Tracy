@@ -3,6 +3,7 @@
 <head>   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cesar+Tracy</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <script src="https://unpkg.com/feather-icons"></script>
@@ -12,20 +13,23 @@
 <body>
 
   <section class="berk-parallax">
-    <div class="navbar">
+    <nav class="navbar">
       <div class="logo">
         <a href="#">Cesar <span>+</span> Tracy</a>
       </div>
-      <ul class="list">
+      <ul class="list primary-navigation"  data-state="closed">
         <li><a href="#about-us-section">About Us</a></li>
         <li><a href="#">Gallery</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-    </div>
+      <button class="ham-btn" aria-controls="primary-navigation" aria-expanded="false" aria-hidden="true">
+        <div class="hamburger" aria-hidden="true"></div>
+      </button>
+    </nav>
     <div class="title">
       <div class="title-top">
         <i class="fas fa-heart"></i>
-        <h1>Our life album</h1>
+        <h2>Our life album</h2>
         <i class="fas fa-heart"></i>
       </div>
       <div id="underline"></div>
@@ -52,7 +56,7 @@
     <div class="title">
       <div class="title-top">
           <i class="fas fa-heart"></i>
-          <h1>About Us</h1>
+          <h2>About Us</h2>
           <i class="fas fa-heart"></i>
       </div>
       <div id="underline-aboutUs"></div>
