@@ -127,13 +127,19 @@ a{
   transition: ease 0.5s;
 }
 
+.list[data-state="closed"] {
+    display: none;   
+  }
+
 .list{
   position: absolute;
-  right: 5px;
+  left: 0;
   top: 65px;
-  background-color: rgb(0, 0, 0, .3);
-  width: auto;
+  background-color: white;
+  border: 3px solid var(--primary-5);
+  width: 100%;
   padding: 0 10px;
+  border-radius: 10px;
 }
 
 .list li{
@@ -141,6 +147,7 @@ a{
     border-bottom: 2px solid var(--primary-5);
     text-align: center;
     padding: 10px;
+    width: 100%;
 }
 .list li:nth-child(3){
     border-bottom: none;
@@ -150,21 +157,12 @@ a{
     background-color: var(--primary3);
 }
 
-.list ul{
-}
-.icon{
-}
-
-[data-state='opened'] .list {
+/* [data-state='opened'] .list {
 animation: 750ms ease-in-out forwards;
 }
 
 .list[data-state="closed"] {
 animation: 750ms ease-in-out forwards; 
-}
-
-.list[data-state="closed"] {
-  display: none;   
 }
 
 @keyframes open-nav {
@@ -174,7 +172,7 @@ animation: 750ms ease-in-out forwards;
 @keyframes close-nav {
     0% { clip-path: square(250% at top right); }
     100% { clip-path: square(0% at top right); }
-}
+} */
 
 .hamburger,
 .hamburger::before,
@@ -189,11 +187,11 @@ animation: 750ms ease-in-out forwards;
     transform-origin: center;
     }
 
-.hamburger::before {
+[aria-expanded="false"] .hamburger::before {
     transform: translateY(-8px);
 }
 
-.hamburger::after {
+[aria-expanded="false"] .hamburger::after {
     transform: translateY(4px);
 }
 
@@ -213,7 +211,6 @@ animation: 750ms ease-in-out forwards;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    /* padding: 0 10px; */
 }
 
 .title {
@@ -323,26 +320,22 @@ img{
 
 /* s */
 
-@media (min-width: 440px) {
+@media (max-width: 440px) {
   /* for screen larger than 440 */
-  #active-image{
-    width: 70%;
-  }
-
-}
-
-@media (min-width: 768px) {
-  #active-image{
-    width: 50%;
-  }
-  .list{
-    display: flex;
-    gap: 15px;
-  }
-  .ham-btn{
-    display: none;
-  }
-  .list{
-    display: block;
-  }
-}
+    /* #active-image{
+        width: 50%;
+    } */
+    /* .ham-btn{
+        display: none;
+    } */
+    .list{
+        position: fixed;
+        inset: 65px 0 auto 30%;
+        background: grey;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        background: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(1.5rem);
+        transition: slide 2s;
+    }
+}    
