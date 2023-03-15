@@ -112,11 +112,6 @@ styles
   color: black;
 }
 
-.navbar a:hover, .list a:hover{
-    border-bottom: .25rem solid;
-    border-color: var(--primary-5);
-}
-
 .logo{
   font-family: 'Zeyada', cursive;
   font-size: 2rem;
@@ -126,31 +121,20 @@ styles
 
 @media (min-width: 550px) {
     /* for screen larger than 550 */
-.list{
+    .list a:hover{
+        border-bottom: .25rem solid;
+        border-color: var(--primary-5);
+    }
+    .ham-btn{
+        display: none;
+    }
+    .list{
     display: flex;
-}
-
-}
-
-/* [data-state='opened'] .list {
-animation: 750ms ease-in-out forwards;
-}
-
-.list[data-state="closed"] {
-animation: 750ms ease-in-out forwards; 
-}
-
-@keyframes open-nav {
-    0% { clip-path: square(0% at top right); }
-    100% { clip-path: square(250% at top right); }
-}
-@keyframes close-nav {
-    0% { clip-path: square(250% at top right); }
-    100% { clip-path: square(0% at top right); }
-} */
-
-.ham-btn{
-    display: none;
+    gap: 1rem;
+    }
+    .list span{
+        display: none;
+    }
 }
 
 .title {
@@ -275,23 +259,33 @@ img{
     .list{
         position: fixed;
         z-index: 98;
-        inset: 0 0 0 30%;
-        background: grey;
+        inset: 0 0 auto 30%;
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
-        gap: 1rem;
         background: hsl(0 0% 100% / 0.1);
-        backdrop-filter: blur(1.5rem);
+        backdrop-filter: blur(10px);
         transition: slide 2s;
         transform: translateX(100%);
+        display: flex;
+        gap: 2rem;
         transition: transform 500ms ease-out;
     }
 
     .list[data-state="opened"]{
         transform: translateX(0%);
     }
+    .list li{
+        border-bottom: .25rem solid var(--primary-5);
+        font-size: 1.5rem;
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .list a{
 
-    /* Haamburger menu visual when not expanded */
+    }
+
+    /* Hamburger menu visual when not expanded */
     .hamburger,
     .hamburger::before,
     .hamburger::after {

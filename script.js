@@ -68,15 +68,6 @@ function openMenu() {
   siteNav.setAttribute('data-state', 'opened');
 }
 
-// function closeMenu() {
-//   menuToggle.setAttribute('aria-expanded', 'false');
-//   siteNav.setAttribute('data-state', 'closing');
-
-//   menuToggle.addEventListener('click', () => {
-//     siteNav.setAttribute('data-state', 'closed');
-//   }, {once: true})
-// }
-
 function closeMenu() {
   menuToggle.setAttribute('aria-expanded', 'false');
   siteNav.setAttribute('data-state', 'closed');
