@@ -259,11 +259,11 @@ img{
     .list{
         position: fixed;
         z-index: 98;
-        inset: 0 0 auto 30%;
+        inset: 0 0 0 0;
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
-        background: hsl(0 0% 100% / 0.1);
-        backdrop-filter: blur(10px);
+        background: hsl(100 100% 100%);
+        /* backdrop-filter: blur(10px); */
         transition: slide 2s;
         transform: translateX(100%);
         display: flex;
@@ -279,10 +279,10 @@ img{
         font-size: 1.5rem;
         padding: 5px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
     }
     .list a{
-
+      padding-left: 1rem;
     }
 
     /* Hamburger menu visual when not expanded */
