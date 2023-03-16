@@ -97,7 +97,7 @@ styles
   min-height: 1000px;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
 }
 
@@ -124,6 +124,9 @@ styles
     .list a:hover{
         border-bottom: .25rem solid;
         border-color: var(--primary-5);
+    }
+    .list a{
+      font-size: 1.25rem;
     }
     .ham-btn{
         display: none;
@@ -247,42 +250,43 @@ img{
 @media (max-width: 550px) {
   /* for screen smaller than 550 */
     #active-image{
-        width: 70%;
+      width: 70%;
     }
     .ham-btn{
-        display: block;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 99;
+      display: block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 99;
     }
     .list{
-        position: fixed;
-        z-index: 98;
-        inset: 0 0 0 0;
-        flex-direction: column;
-        padding: min(30vh, 10rem) 2em;
-        background: hsl(100 100% 100%);
-        /* backdrop-filter: blur(10px); */
-        transition: slide 2s;
-        transform: translateX(100%);
-        display: flex;
-        gap: 2rem;
-        transition: transform 500ms ease-out;
+      position: fixed;
+      z-index: 98;
+      inset: 60px 0 0 0;
+      flex-direction: column;
+      /* padding: 20px; */
+      background: rgb(163,198,220);
+      background: linear-gradient(180deg, rgba(163,198,220,1) 40%, rgba(255,255,255,1) 100%);
+      transition: slide 2s;
+      transform: translateX(100%);
+      display: flex;
+      gap: 2rem;
+      transition: transform 500ms ease-out;
+      border-radius: 10px 10px 0 0;
     }
 
     .list[data-state="opened"]{
-        transform: translateX(0%);
+      transform: translateX(0%);
     }
     .list li{
-        border-bottom: .25rem solid var(--primary-5);
-        font-size: 1.5rem;
-        padding: 5px;
-        display: flex;
-        justify-content: center;
+      /* padding: 20px 0; */
+      border-bottom: .5px solid var(--primary-5);
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
     }
     .list a{
-      padding-left: 1rem;
+      padding: 20px 100%;
     }
 
     /* Hamburger menu visual when not expanded */

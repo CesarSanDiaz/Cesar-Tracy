@@ -57,11 +57,16 @@ rightBtnElement.addEventListener('click', () => {
 
 const menuToggle = document.querySelector('.ham-btn');
 const siteNav = document.querySelector('.primary-navigation');
+const navigationLinks = document.querySelectorAll('.nav-link');
 
+// event listener on ham button that toggles menu
 menuToggle.addEventListener('click', () => {
   isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
   isOpen ? closeMenu() : openMenu();
 })
+
+// closing menu once a link has been clicked 
+navigationLinks.forEach(link => link.addEventListener('click', closeMenu));
 
 function openMenu() {
   menuToggle.setAttribute('aria-expanded', 'true');
@@ -71,4 +76,13 @@ function openMenu() {
 function closeMenu() {
   menuToggle.setAttribute('aria-expanded', 'false');
   siteNav.setAttribute('data-state', 'closed');
+}
+
+// detecting scroll so that menu is closed 
+userHasScrolled = false
+window.onscroll = () => {
+  userHasScrolled = true;
+  if (userHasScrolled) {
+    closeMenu();
+  }
 }
