@@ -13,15 +13,23 @@ Variables
 */
 
 :root{
-  /* darker shades */
+  /* Lighter shades */
   --primary3: #ff6666;
   --primary4: #ff3333;
 
   /* primary colors */
   --primary-5: #ff0000;
   
-  /* lighter shades */
+  /* Darker shades */
   --primary6: #cc0000;
+
+  --blue4: #464956;
+  --blue5: #181c2c;
+  --blue6: #131623;
+
+  --light4: #dadde2;
+  --light5: #d1d5db;
+  --light6: #a7aaaf;
 }
 
 /*
@@ -43,12 +51,12 @@ html {
 }
 
 body{
-  background-color: beige;
   font-family: "Ubuntu", sans-serif;
   text-align: center;
   font-size: 0.85rem;
   line-height: 1.5rem;
   overflow-x: hidden;
+  background-color: #d1d5db;
 }
 
 ul {
@@ -57,6 +65,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
 }
 
 h1,
@@ -93,12 +105,12 @@ styles
 */
 
 .berk-parallax{
-  background-image: url(./images/jeremy-huang-dc94LHM58cA-unsplash.jpg);
+  /* background-image: url(./images/jeremy-huang-dc94LHM58cA-unsplash.jpg); */
   min-height: 1000px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
+  /* background-attachment: fixed;
+  background-repeat:#181c2c no-repeat;
+  background-size: cover;
+  background-position: center; */
 }
 
 .navbar{
@@ -106,24 +118,24 @@ styles
   font-size: 1rem;
   display: flex;
   justify-content:space-between;
-}
-
-.navbar a:visited{
-  color: black;
+  background-color: #181c2c;
+  color: var(--light5);
 }
 
 .logo{
   font-family: 'Zeyada', cursive;
   font-size: 2rem;
   font-weight: 800;
-  color: var(--primary-5);
+  color: var(--light5);
 }
 
 @media (min-width: 550px) {
     /* for screen larger than 550 */
+    #active-image{
+      width: 50%;
+    }
     .list a:hover{
-        border-bottom: .25rem solid;
-        border-color: var(--primary-5);
+      text-decoration: underline .25rem var(--primary-5);
     }
     .list a{
       font-size: 1.25rem;
@@ -177,6 +189,11 @@ styles
   width: 10rem;
 }
 
+.about-us{
+  border-top: var(--blue5) .25rem solid;
+  height: 1100px;
+}
+
 .card, .blurb {
   padding: 10px;
 }
@@ -210,12 +227,6 @@ img{
   /* color: var(--primary4); */
   opacity: 0.5;
   transition: all ease 0.2s;
-}
-
-.about-us{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .btn-container{
@@ -262,12 +273,12 @@ img{
     .list{
       position: fixed;
       z-index: 98;
-      inset: 60px 0 0 0;
+      inset: 54px 0 0 0;
+      padding: 20px;
       flex-direction: column;
       /* padding: 20px; */
-      background: rgb(163,198,220);
-      background: linear-gradient(180deg, rgba(163,198,220,1) 40%, rgba(255,255,255,1) 100%);
-      transition: slide 2s;
+      background: var(--light5);
+      /* transition: slide 2s; */
       transform: translateX(100%);
       display: flex;
       gap: 2rem;
@@ -278,15 +289,21 @@ img{
     .list[data-state="opened"]{
       transform: translateX(0%);
     }
+
     .list li{
-      /* padding: 20px 0; */
-      border-bottom: .5px solid var(--primary-5);
       font-size: 1.5rem;
       display: flex;
       justify-content: center;
+      width: 100%;
     }
     .list a{
-      padding: 20px 100%;
+      color: var(--blue5);
+      margin: 0 100%;
+      margin-inline:inherit;
+    }
+
+    .list a:hover{
+      text-decoration: underline .25rem var(--primary-5);
     }
 
     /* Hamburger menu visual when not expanded */
@@ -313,11 +330,11 @@ img{
     }
     [aria-expanded='true'] .hamburger{
         transform: rotate(-225deg);
-        background-color: black;
+        background-color: var(--light5);
     }
     [aria-expanded='true'] .hamburger::after{
         transform: translateY(-5px) rotate(90deg);
-        background-color: black;
+        background-color: var(--light5);
     }
 
 }    
