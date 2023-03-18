@@ -108,14 +108,15 @@ styles
 */
 
 .berk-parallax{
+  background-color: var(--light5);
   background-image: url(./images/AZ\ Peaks.JPG);
-  min-height: 750px;
   background-attachment: fixed;
-  position: relative;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+  /* box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); */
+  padding-bottom: 300px;
+  background-blend-mode: multiply;
+
 }
 
 .navbar{
@@ -182,8 +183,8 @@ styles
 }
 
 .title {
+  padding-top: 50px;
   justify-content: center;
-  padding-top: 20px;
   align-items: center;
   position: relative;
   display: inline-block;
@@ -227,7 +228,7 @@ styles
 }
 
 .about-us{
-  border-top: var(--blue5) .25rem solid;
+  /* border-top: var(--blue5) .25rem solid; */
   height: 1100px;
 }
 
