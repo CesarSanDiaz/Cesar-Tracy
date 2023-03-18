@@ -16,8 +16,11 @@ function scrollToAboutUs() {
 
 // array of images that I want to go through
 const images = [
-  "images/img_avatar.png",
-  "images/img_avatar2.png"
+  "images/IMG_4500.JPG",
+  "images/IMG-8837.JPG",
+  "images/IMG_4430.JPG",
+  "images/IMG_4500.JPG",
+  "images/IMG_6999.jpg"
 ]
 
 let currentImage = null;
