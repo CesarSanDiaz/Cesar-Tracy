@@ -317,10 +317,10 @@ img{
     background-color: var(--light5);
     background-image: url(./images/AZ\ Peaks\ Cropped2.JPG);
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover; */
+    background-position: bottom right;
     background-repeat: no-repeat;
-    /* box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); */
+    background-size: auto 100vh;
     padding-bottom: 300px;
     color: var(--blue5);
     animation: moving2 50s alternate infinite;
