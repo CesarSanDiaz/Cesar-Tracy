@@ -107,29 +107,6 @@ styles
 ================================
 */
 
-.berk-parallax{
-  background-color: var(--light5);
-  background-image: url(./images/AZ\ Peaks\ Cropped.JPG);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: left;
-  background-repeat: repeat;
-  /* box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); */
-  padding-bottom: 400px;
-  /* background-blend-mode: multiply; */
-  color: var(--blue5);
-  animation: moving 45s alternate infinite;
-}
-
-
-@keyframes moving {
-  0%{
-    background-position: 25% 0;
-  }
-  100%{
-    background-position: 70% 0;
-  }
-}
 
 .navbar{
   padding: 15px 20px;
@@ -171,27 +148,51 @@ styles
 }
 
 @media (min-width: 550px) {
-    /* for screen larger than 550 */
-    #active-image{
-      width: 50%;
-    }
+  /* for screen larger than 550 */
 
-    .list a{
-      font-size: .8rem;
-      position: relative;
-      display: inline-block;
-    }
+  .berk-parallax{
+    background-color: var(--light5);
+    background-image: url(./images/AZ\ Peaks\ Cropped.JPG);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    /* box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); */
+    padding-bottom: 400px;
+    /* background-blend-mode: multiply; */
+    color: var(--blue5);
+    animation: moving 45s alternate infinite;
+  }
 
-    .ham-btn{
+  @keyframes moving {
+    0%{
+      background-position: 25% 0;
+    }
+    100%{
+      background-position: 70% 0;
+    }
+  }
+
+  #active-image{
+    width: 50%;
+  }
+
+  .list a{
+    font-size: .8rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  .ham-btn{
+    display: none;
+  }
+  .list{
+    display: flex;
+    gap: 1rem;
+  }
+  .list span{
       display: none;
-    }
-    .list{
-      display: flex;
-      gap: 1rem;
-    }
-    .list span{
-        display: none;
-    }
+  }
 }
 
 .title {
@@ -308,8 +309,32 @@ img{
 
 /* s */
 
+
 @media (max-width: 550px) {
   /* for screen smaller than 550 */
+
+  .berk-parallax{
+    background-color: var(--light5);
+    background-image: url(./images/AZ\ Peaks\ Cropped2.JPG);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); */
+    padding-bottom: 300px;
+    color: var(--blue5);
+    animation: moving2 50s alternate infinite;
+  }
+
+  @keyframes moving2 {
+    0%{
+      background-position: 18% 0;
+    }
+    100%{
+      background-position: 70% 0;
+    }
+  }
+
   #active-image{
       width: 70%;
     }
@@ -382,4 +407,4 @@ img{
         background-color: var(--light5);
     }
 
-}    
+}
