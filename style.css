@@ -109,14 +109,26 @@ styles
 
 .berk-parallax{
   background-color: var(--light5);
-  background-image: url(./images/AZ\ Peaks.JPG);
+  background-image: url(./images/AZ\ Peaks\ Cropped.JPG);
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: left;
+  background-repeat: repeat;
   /* box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); */
-  padding-bottom: 300px;
-  background-blend-mode: multiply;
+  padding-bottom: 400px;
+  /* background-blend-mode: multiply; */
+  color: var(--blue5);
+  animation: moving 45s alternate infinite;
+}
 
+
+@keyframes moving {
+  0%{
+    background-position: 25% 0;
+  }
+  100%{
+    background-position: 70% 0;
+  }
 }
 
 .navbar{
@@ -183,7 +195,7 @@ styles
 }
 
 .title {
-  padding-top: 50px;
+  padding-top: 30px;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -311,22 +323,19 @@ img{
     .list{
       position: fixed;
       z-index: 98;
-      inset: 51px 0 30% 10%;
+      inset: 51px 0 30% 0;
       padding: 20px;
       flex-direction: column;
-      background: var(--light5);
-      transform: translateX(100%);
+      background: var(--white);
+      transform: translateY(-150%);
       display: flex;
       gap: 2rem;
       transition: transform 500ms ease-out;
-      border-left:.25rem solid var(--blue5);
-      border-bottom: .25rem solid var(--blue5);
-      border-top: .25rem solid var(--blue5);
-      border-radius: 10px 0 0 10px;
+      border:.25rem solid var(--blue5);
     }
 
     .list[data-state="opened"]{
-      transform: translateX(0%);
+      transform: translateY(0%);
     }
 
     .list li{
