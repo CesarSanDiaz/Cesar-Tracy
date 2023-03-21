@@ -108,6 +108,13 @@ styles
 */
 
 
+.berk-parallax{
+  background-color: var(--light5);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--blue5);
+}
+
 .navbar{
   padding: 15px 20px;
   font-size: 1rem;
@@ -147,21 +154,220 @@ styles
   transform-origin: left;
 }
 
+
+.title {
+  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: inline-block;
+}
+
+.fa-heart{
+  color: var(--primary-5);
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.title h2{
+  margin: 0;
+  padding: 0;
+}
+
+.title h2::after{
+  content: ''; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  height: .20rem;
+  background-color: var(--primary-5);
+  animation: underline 1s ease-out;
+}
+
+@keyframes underline {
+  from {width: 0};
+  to {width: 100%}
+}
+
+.card{
+  padding-top: 20px;
+}
+
+.about-us{
+  border-top: var(--blue5) .25rem solid;
+  /* height: 1100px; */
+}
+.about-us p{
+  height: 1100px;
+}
+/*///////////////////////////////////////*/
+/*///////////////////////////////////////*/
+/*///////////////////////////////////////*/
+
+.mySlides {
+  display: none
+}
+img {
+  vertical-align: middle;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Caption text */
+.text {
+  color: #ffffff;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #999999;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #111111;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
+/*///////////////////////////////////////*/
+/*///////////////////////////////////////*/
+/*///////////////////////////////////////*/
+
+/* .btn-container{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+} */
+
+#down-btn, #left-btn, #right-btn{
+  background: transparent;
+  border-color: transparent;
+  color: var(--primary-5);
+}
+
+.chevron-btn{
+  width: 75px;
+  height: 75px;
+}
+
+#down-btn:hover, #left-btn:hover, #right-btn:hover{
+  cursor: pointer;
+  /* color: var(--primary4); */
+  opacity: 0.5;
+  transition: all ease 0.2s;
+}
+
+
+#left-btn{
+  /* position: absolute; */
+  left: 10%;
+  bottom: 0;
+  padding: 0 20px;
+}
+#right-btn{
+  /* position: absolute; */
+  right: 10%;
+  bottom: 0;
+  padding: 0 20px;
+}
+
+/*/////////////////////
+//LARGE SCREENS ONLY//
+///////////////////*/
 @media (min-width: 550px) {
-  /* for screen larger than 550 */
+  /* for screen LARGER than 550 */
 
   .berk-parallax{
-    background-color: var(--light5);
     background-image: url(./images/AZ\ Peaks\ Cropped.JPG);
-    background-attachment: fixed;
     background-size: cover;
     background-position: left;
-    background-repeat: no-repeat;
-    /* box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); */
-    padding-bottom: 400px;
-    /* background-blend-mode: multiply; */
-    color: var(--blue5);
-    animation: moving 45s alternate infinite;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    padding-bottom: 700px;
+    animation: moving 60s alternate infinite;
   }
 
   @keyframes moving {
@@ -173,9 +379,9 @@ styles
     }
   }
 
-  #active-image{
+  /* #active-image{
     width: 50%;
-  }
+  } */
 
   .list a{
     font-size: .8rem;
@@ -195,134 +401,20 @@ styles
   }
 }
 
-.title {
-  padding-top: 30px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  display: inline-block;
-}
 
-.title-top{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-transform: capitalize;
-}
-
-.blurb{
-  text-transform: capitalize;
-}
-
-.title-top h2, .title-top p, .blurb p{
-  margin: 0;
-}
-
-.fa-heart{
-  color: var(--primary-5);
-  font-size: 1rem;
-  margin-left: 5px;
-}
-
-.title-top h2::after{
-  content: ''; 
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%; 
-  height: .20rem;
-  background-color: var(--primary-5);
-  animation: underline 1s ease-out;
-}
-
-@keyframes underline {
-  from {width: 0};
-  to {width: 100%}
-}
-
-.about-us{
-  /* border-top: var(--blue5) .25rem solid; */
-  height: 1100px;
-}
-
-.card, .blurb {
-  padding: 10px;
-}
-
-fa-home::before, .fa-image::before, fa-mail::before{
-    margin-right: .5em;
-}
-
-img{
-  width: 300px;
-}
-
-.img-container{
-  padding-bottom: 10px;
-}
-
-#down-btn, #left-btn, #right-btn{
-  background: transparent;
-  border-color: transparent;
-  color: var(--primary-5);
-
-}
-
-.chevron-btn{
-  width: 75px;
-  height: 75px;
-}
-
-#down-btn:hover, #left-btn:hover, #right-btn:hover{
-  cursor: pointer;
-  /* color: var(--primary4); */
-  opacity: 0.5;
-  transition: all ease 0.2s;
-}
-
-.btn-container{
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-}
-
-.btn-container img{
-  width: 90%;
-  padding-bottom: 85px;
-}
-
-#left-btn{
-  position: absolute;
-  left: 10%;
-  bottom: 0;
-  padding: 0 20px;
-}
-#right-btn{
-  position: absolute;
-  right: 10%;
-  bottom: 0;
-  padding: 0 20px;
-}
-
-/* s */
-
-
+/*/////////////////////
+//SMALL SCREENS ONLY//
+///////////////////*/
 @media (max-width: 550px) {
   /* for screen smaller than 550 */
 
   .berk-parallax{
-    background-color: var(--light5);
     background-image: url(./images/AZ\ Peaks\ Cropped2.JPG);
     background-attachment: fixed;
-    /* background-size: cover; */
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: auto 100vh;
     padding-bottom: 300px;
-    color: var(--blue5);
     animation: moving2 50s alternate infinite;
   }
 
@@ -334,77 +426,82 @@ img{
       background-position: 70% 0;
     }
   }
-
+/* 
   #active-image{
-      width: 70%;
-    }
-    .ham-btn{
-      display: block;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      z-index: 99;
-    }
-    .list{
-      position: fixed;
-      z-index: 98;
-      inset: 51px 0 30% 0;
-      padding: 20px;
-      flex-direction: column;
-      background: var(--white);
-      transform: translateY(-150%);
-      display: flex;
-      gap: 2rem;
-      transition: transform 500ms ease-out;
-      border:.25rem solid var(--blue5);
-    }
-
-    .list[data-state="opened"]{
-      transform: translateY(0%);
-    }
-
-    .list li{
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    .list a{
-      color: var(--blue5);
-      margin: 0 100%;
-      margin-inline:inherit;
-      position: relative;
-    }
-
-    /* Hamburger menu visual when not expanded */
-    .hamburger,
-    .hamburger::before,
-    .hamburger::after {
-    content: "";
+    width: 70%;
+  } */
+  .ham-btn{
     display: block;
-    background: var(--primary-5);
-    height: 5px;
-    width: 2em;
-    border-radius: 3px;
-    transition: all ease-in-out 500ms;
-    transform-origin: center;
-    }
-    [aria-expanded="false"] .hamburger::before {
-        transform: translateY(-8px);
-    }
-    [aria-expanded="false"] .hamburger::after {
-        transform: translateY(4px);
-    }
-    [aria-expanded="true"] .hamburger::before{
-        opacity: 0;
-    }
-    [aria-expanded='true'] .hamburger{
-        transform: rotate(-225deg);
-        background-color: var(--light5);
-    }
-    [aria-expanded='true'] .hamburger::after{
-        transform: translateY(-5px) rotate(90deg);
-        background-color: var(--light5);
-    }
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+  }
+  .list{
+    position: fixed;
+    z-index: 98;
+    inset: 51px 0 30% 0;
+    padding: 20px;
+    flex-direction: column;
+    background: var(--white);
+    transform: translateY(-150%);
+    display: flex;
+    gap: 2rem;
+    transition: transform 500ms ease-out;
+    border:.25rem solid var(--blue5);
+  }
+
+  .list[data-state="opened"]{
+    transform: translateY(0%);
+  }
+
+  .list li{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .list a{
+    color: var(--blue5);
+    margin: 0 100%;
+    margin-inline:inherit;
+    position: relative;
+  }
+
+  /* Hamburger menu visual when not expanded */
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+  content: "";
+  display: block;
+  background: var(--primary-5);
+  height: 5px;
+  width: 2em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+  transform-origin: center;
+  }
+  [aria-expanded="false"] .hamburger::before {
+      transform: translateY(-8px);
+  }
+  [aria-expanded="false"] .hamburger::after {
+      transform: translateY(4px);
+  }
+  [aria-expanded="true"] .hamburger::before{
+      opacity: 0;
+  }
+  [aria-expanded='true'] .hamburger{
+      transform: rotate(-225deg);
+      background-color: var(--light5);
+  }
+  [aria-expanded='true'] .hamburger::after{
+      transform: translateY(-5px) rotate(90deg);
+      background-color: var(--light5);
+  }
+  
+  .title h2::after{
+    left: 2.5%;
+    width: 95%;
+  }
 
 }

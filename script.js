@@ -14,50 +14,63 @@ function scrollToAboutUs() {
 
 // <<<<=====About us buttons====>>>>>>
 
-// array of images that I want to go through
-const images = [
-  "images/IMG_4500.JPG",
-  "images/IMG-8837.JPG",
-  "images/IMG_4430.JPG",
-  "images/IMG_4500.JPG",
-  "images/IMG_6999.jpg"
-]
-
-let currentImage = null;
-
-const currentImageElement = document.getElementById('active-image');
-const leftBtnElement = document.getElementById('left-btn');
-const rightBtnElement = document.getElementById('right-btn');
-
-const setActiveImage = (targetImage) => {
-  currentImage = targetImage;
-  currentImageElement.setAttribute('src', targetImage);
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
-setActiveImage(images[0]);
+// const setActiveImage = (targetImage) => {
+//   currentImage = targetImage;
+//   currentImageElement.setAttribute('src', targetImage);
+// }
 
-leftBtnElement.addEventListener('click', () => {
-  let currentIndex = images.indexOf(currentImage);
-  if (currentIndex - 1 < 0) {
-    currentIndex = images.length - 1;
-  } else {
-    currentIndex--;
-  }
-  setActiveImage(images[currentIndex]);
-})
+// setActiveImage(images[0]);
 
-rightBtnElement.addEventListener('click', () => {
-  let currentIndex = images.indexOf(currentImage);
-  if (currentIndex + 1 === images.length) {
-    currentIndex = 0;
-  } else {
-    currentIndex++;
-  }
-  setActiveImage(images[currentIndex]);
-})
+// leftBtnElement.addEventListener('click', () => {
+//   let currentIndex = images.indexOf(currentImage);
+//   if (currentIndex - 1 < 0) {
+//     currentIndex = images.length - 1;
+//   } else {
+//     currentIndex--;
+//   }
+//   setActiveImage(images[currentIndex]);
+// })
 
-// Hamberger button
+// rightBtnElement.addEventListener('click', () => {
+//   let currentIndex = images.indexOf(currentImage);
+//   if (currentIndex + 1 === images.length) {
+//     currentIndex = 0;
+//   } else {
+//     currentIndex++;
+//   }
+//   setActiveImage(images[currentIndex]);
+// })
 
+
+//////////////////// HAMBURGER MENU ///////////////
 const menuToggle = document.querySelector('.ham-btn');
 const siteNav = document.querySelector('.primary-navigation');
 const navigationLinks = document.querySelectorAll('.nav-link');

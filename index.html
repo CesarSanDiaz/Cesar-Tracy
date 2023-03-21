@@ -41,23 +41,11 @@
     </nav>
 
     <div class="title">
-      <div class="title-top">
-        <!-- <i class="fas fa-heart"></i> -->
-        <h2>Living for experiences</h2>
-        <!-- <i class="fas fa-heart"></i> -->
-      </div>
+      <h2>Living for experiences</h2>
     </div>
     <div class="card">
-      <!-- <div class="img-container">
-        <img src="./images/marriage-crop.png" alt="headshot">
-      </div> -->
-      <!-- <h2>Cesar + Tracy</h2> -->
-      <div class="blurb">
-        <h5>our travel blog</h5>
-        <h5>exploring the world one place at a time</h5>
-        <!-- <h3>Living for experiences!</h3> -->
-      </div>
-    
+      <h5>our travel blog</h5>
+      <h5>exploring the world one place at a time</h5>
       <div class="btn-container">
         <button id="down-btn">
           <i class="chevron-btn" data-feather="chevrons-down"></i>
@@ -68,24 +56,62 @@
 
   <section class="about-us" id="about-us-section">
     <div class="title">
-      <div class="title-top">
-          <!-- <i class="fas fa-heart"></i> -->
-          <h2>About Us</h2>
-          <!-- <i class="fas fa-heart"></i> -->
-      </div>
+      <h2>About Us</h2>
     </div>
 
-    <div class="slider">
-      <div class="btn-container">
-        <button id="left-btn">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="./images/Joshua Tree.JPG" style="width:100%">
+        <div class="text">Joshua Tree National Park</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="./images/Devils Bridge.JPG" style="width:100%">
+        <div class="text">Sedona, Arizona</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="./images/Saguaro.JPG" style="width:100%">
+        <div class="text">Saguaro National Park</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="./images/Yosemite.jpg" style="width:100%">
+        <div class="text">Saguaro National Park</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="./images/IMG_4500.JPG" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="./images/IMG-8837.JPG" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="./images/IMG_4430.JPG" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="./images/IMG_6999.jpg" style="width:100%">
+      </div> -->
+      
+      <!-- <div class="btn-container">
+        <button id="left-btn" onclick="plusSlides(-1)">
           <i class="chevron-btn" data-feather="chevrons-left"></i>
         </button>
-        <img id="active-image" src="images/img_avatar.png" alt="">
-        <button id="right-btn">
+        <button id="right-btn" onclick="plusSlides(1)">
           <i class="chevron-btn" data-feather="chevrons-right"></i>
         </button>
       </div>
-    </div>
+    </div> -->
 
     <div class="aboutUs-content">
       <h3>Picture title</h3>
