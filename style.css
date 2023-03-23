@@ -216,24 +216,30 @@ styles
   padding-top: 20px;
 }
 
-.about-us > .card{
+.about-us > .intro{
   margin: 0;
   padding: 1.5rem;
-  display: flex;
-  gap: 1.5rem;
 }
 
-.left-section, .right-section{
+.intro span{
+  display: block;
+}
+
+.intro h4{
+  text-transform: none;
+}
+.intro h4:nth-child(even), .intro span{
+  color: var(--primary-5);
+}
+
+/* .left-section, .right-section{
   background-color: var(--light5);
   color: var(--blue5);
   flex-basis: 100%;
   border-radius: .25rem;
   padding: 1rem;
-}
+} */
 
-.left-section h4, .right-section h4{
-  color: var(--primary-5);
-}
 
 /*///////////////////////////////////////*/
 /* ////////////SLIDE SHOW/////////////// */
@@ -318,7 +324,7 @@ img {
 }
 .active,
 .dot:hover {
-  background-color: #111111;
+  background-color: var(--primary-5);
 }
 /* Fading animation */
 .fade {
