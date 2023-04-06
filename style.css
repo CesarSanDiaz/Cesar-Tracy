@@ -79,11 +79,8 @@ h2,
 h3,
 h4,
 h5 {
-  letter-spacing: 0.1rem;
   text-transform: capitalize;
-  line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: "Ubuntu", sans-serif;
 }
 
 
@@ -103,6 +100,10 @@ p {
   margin-bottom: 1.25rem;
 }
 
+strong{
+  font-weight: 800;
+}
+
 /*
 ================================ 
 styles
@@ -110,6 +111,7 @@ styles
 */
 
 .berk-parallax{
+  height: 100svh;
   background-color: var(--light5);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -192,9 +194,8 @@ styles
 .title h2::after{
   content: ''; 
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
-  width: 100%; 
   height: .20rem;
   background-color: var(--primary-5);
   animation: underline 1s ease-out;
@@ -205,11 +206,12 @@ styles
   to {width: 100%}
 }
 
-.about-us{
+.about-us, .gallery{
   border-top: var(--blue5) .25rem solid;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
 }
-.about-us p{
-  /* height: 1100px; */
+.about-us a{
+  color: var(--primary-5);
 }
 
 .card{
@@ -223,22 +225,20 @@ styles
 
 .intro span{
   display: block;
+  font-size: 1rem;
 }
 
-.intro h4{
+.about-us h4{
   text-transform: none;
 }
 .intro h4:nth-child(even), .intro span{
   color: var(--primary-5);
 }
 
-/* .left-section, .right-section{
-  background-color: var(--light5);
-  color: var(--blue5);
-  flex-basis: 100%;
-  border-radius: .25rem;
-  padding: 1rem;
-} */
+iconify-icon{
+  color: var(--primary-5);
+}
+
 
 
 /*///////////////////////////////////////*/
@@ -368,7 +368,7 @@ img {
     background-size: cover;
     background-position: left;
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    padding-bottom: 700px;
+  /* padding-bottom: 700px; */
     animation: moving 60s alternate infinite;
   }
 
@@ -380,10 +380,6 @@ img {
       background-position: 70% 0;
     }
   }
-
-  /* #active-image{
-    width: 50%;
-  } */
 
   .list a{
     font-size: .8rem;
@@ -398,8 +394,9 @@ img {
     display: flex;
     gap: 1rem;
   }
-  .list span{
-      display: none;
+
+  iconify-icon{
+    vertical-align:middle;
   }
 }
 
@@ -415,8 +412,8 @@ img {
     background-attachment: fixed;
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: auto 100vh;
-    padding-bottom: 300px;
+    background-size: auto 100svh;
+    /* padding-bottom: 300px; */
     animation: moving2 50s alternate infinite;
   }
 
@@ -428,10 +425,7 @@ img {
       background-position: 70% 0;
     }
   }
-/* 
-  #active-image{
-    width: 70%;
-  } */
+
   .ham-btn{
     display: block;
     background-color: transparent;
@@ -468,6 +462,7 @@ img {
     margin: 0 100%;
     margin-inline:inherit;
     position: relative;
+    padding-left: 5px;
   }
 
   /* Hamburger menu visual when not expanded */
@@ -505,5 +500,6 @@ img {
     left: 2.5%;
     width: 95%;
   }
+
 
 }

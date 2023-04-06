@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
 </head>
 <body>
@@ -21,16 +22,20 @@
 
       <ul class="list primary-navigation"  data-state="closed">
         <li>
-            <!-- <span class="fas fa-home"></span> -->
-            <a href="#" class="nav-link hover-underline">Home</a>
+          <iconify-icon icon="mdi:home"></iconify-icon>            
+          <a href="#" class="nav-link hover-underline">Home</a>
         </li>
         <li>
-            <!-- <span class="fas fa-users"></span> -->
-            <a href="#about-us-section" class="nav-link hover-underline">About Us</a>
+          <iconify-icon icon="ic:baseline-people-alt"></iconify-icon>
+          <a href="#about-us-section" class="nav-link hover-underline">About Us</a>
         </li>
         <li>
-            <!-- <span class="fas fa-mail"></span> -->
-            <a href="#" class="nav-link hover-underline">Contact</a>
+          <iconify-icon icon="clarity:image-gallery-solid"></iconify-icon>
+          <a href="#gallery-section" class="nav-link hover-underline">Gallery</a>
+        </li>
+        <li>
+          <iconify-icon icon="mdi:email"></iconify-icon>
+          <a href="#" class="nav-link hover-underline">Contact</a>
         </li>
       </ul>
 
@@ -59,7 +64,10 @@
       <h2>About Us</h2>
     </div>
     
-  
+    <h4 class="intro">
+      <span>Welcome to our travel website!</span> We're a couple who shares a love for exploring new places and experiencing different cultures. Our passion for travel has taken us to some incredible destinations around the United States, and we're excited to share our experiences with you. check out our slide show below so see some of the wonderfull places we have been!
+    </h4>
+
     <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="numbertext">1 / 5</div>
@@ -96,10 +104,9 @@
       <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
+    <p>Click <a href="#gallery-section">HERE</a> to see our full photo gallery. </p>
+
     <div class="intro">
-      <h4>
-        <span>Welcome to our travel website!</span> We're a couple who shares a love for exploring new places and experiencing different cultures. Our passion for travel has taken us to some incredible destinations around the United States, and we're excited to share our experiences with you.
-      </h4>
       <h4>  
         We believe that travel is not just a way to escape from our daily routine, but it's a way to learn and grow as individuals. Through our travels, we've discovered that there's so much beauty and diversity in this world, and we feel incredibly grateful to be able to witness it firsthand.
       </h4>
@@ -112,6 +119,12 @@
     </div>
 
   </section>
+
+  <section class="gallery" id="gallery-section">
+    <div class="title">
+      <h2>gallery</h2>
+    </div>
+  </section>  
 
   <div class="footer">
 
