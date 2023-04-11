@@ -96,9 +96,6 @@ h3 {
 h4 {
   font-size: 0.875rem;
 }
-p {
-  margin-bottom: 1.25rem;
-}
 
 strong{
   font-weight: 800;
@@ -200,10 +197,25 @@ strong{
   animation: underline 1s ease-out;
 }
 
-
 @keyframes underline {
   from {width: 0};
   to {width: 100%}
+}
+.underline{
+  position: relative;
+  width: fit-content;
+  margin: 0;
+}
+.underline::after{
+  content: ''; 
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  height: .20rem;
+  background-color: var(--primary-5);
+  animation: underline 1s ease-out;
+  z-index: 12;
 }
 
 .about-us, .gallery{
@@ -246,49 +258,69 @@ iconify-icon{
   width: 90%;
   margin: auto;
 }
+.grid-container a{
+  cursor: auto;
+}
 .grid-item{
   width: 100%;
   min-height: 50svh;
-  color: var(--light5);
+  color: var(--white);
   border: 0.25rem solid var(--blue5);
   border-radius: .25rem;
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: all 250ms ease-in-out;
-
+  text-align: left;
+  transition: all 300ms ease-in-out;
+  opacity: 85%;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  animation: pan-image 40s alternate infinite;
 }
 .grid-item:hover{
-  cursor: pointer;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
   transform: translateY(-5px);
+  opacity: 100%;
 }
 
 .grid-item-1{
   background-image: url(https://images.unsplash.com/photo-1543357480-6b56f2525605?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: bottom center;
 }
+
 .grid-item-2{
   background-image: url(https://images.unsplash.com/photo-1558900812-b4a72552a5f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
   background-size: cover;
+  margin: auto;  
   background-position: left;
 }
 .grid-item-3{
   background-image: url(https://images.unsplash.com/photo-1450993794279-9e448fdbdbe0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80);
   background-size: cover;
+  background-position: bottom center;
 }
 .grid-item-4{
   background-image: url(https://images.unsplash.com/photo-1614291282201-12cee14593fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
   background-size: cover;
+  background-position: bottom center;
 }
 .grid-item-5{
   background-image: url(https://images.unsplash.com/photo-1592492613871-ed475203bfce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
   background-size: cover;
+  background-position: bottom left;
 }
 
-
-
+@keyframes pan-image {
+  0% {
+  background-position: 25% 0;
+  }
+  100% {
+    background-position: 45% 0;
+  }
+}
 
 /*///////////////////////////////////////*/
 /* ////////////SLIDE SHOW/////////////// */
@@ -399,7 +431,6 @@ img {
   }
 }
 
-  
 /*///////////////////////////////////////*/
 /*//////////LARGE SCREENS ONLY///////////*/
 /*///////////////////////////////////////*/
@@ -407,6 +438,7 @@ img {
   /* for screen LARGER than 550 */
 
   .berk-parallax{
+    /* using a cropped pic to better fit background */
     background-image: url(./images/AZ\ Peaks\ Cropped.JPG);
     background-size: cover;
     background-position: left;
@@ -444,17 +476,37 @@ img {
   .grid-container{
     grid-template-columns: 1fr 1fr;
   }
+  .grid-item:hover > h3, .grid-item:hover > p {
+    transition: all 500ms ease-in-out;
+    transform: translateY(-3rem);
+  }
+  .post-link{
+    width: fit-content;
+    color: var(--blue5);
+    background-color: var(--light5);
+    border: 2px solid var(--blue5);
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: .25rem;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .grid-item:hover > h3 + .post-link, .grid-item:hover > p + .post-link{
+    transition: all 500ms ease-in;
+    opacity: 100;
+  }
 }
 
-@media (min-width: 800px){
+@media (min-width: 900px){
   .grid-container{
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-/*/////////////////////
-//SMALL SCREENS ONLY//
-///////////////////*/
+/*///////////////////////////////////////*/
+/*//////////SMALL SCREENS ONLY///////////*/
+/*///////////////////////////////////////*/
 @media (max-width: 550px) {
   /* for screen smaller than 550 */
 
@@ -555,4 +607,10 @@ img {
   .grid-container{
     grid-template-columns: 1fr;
   }
+  .grid-item{
+    opacity: 100;
+  }
+  .post-link{
+    display: none;
+  }  
 }

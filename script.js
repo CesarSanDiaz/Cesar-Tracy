@@ -12,7 +12,7 @@ function scrollToAboutUs() {
   aboutUsSection.scrollIntoView(true);
 }
 
-// <<<<=====About us buttons====>>>>>>
+// <<<<=====SLIDE SHOW====>>>>>>
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -41,34 +41,6 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-
-// const setActiveImage = (targetImage) => {
-//   currentImage = targetImage;
-//   currentImageElement.setAttribute('src', targetImage);
-// }
-
-// setActiveImage(images[0]);
-
-// leftBtnElement.addEventListener('click', () => {
-//   let currentIndex = images.indexOf(currentImage);
-//   if (currentIndex - 1 < 0) {
-//     currentIndex = images.length - 1;
-//   } else {
-//     currentIndex--;
-//   }
-//   setActiveImage(images[currentIndex]);
-// })
-
-// rightBtnElement.addEventListener('click', () => {
-//   let currentIndex = images.indexOf(currentImage);
-//   if (currentIndex + 1 === images.length) {
-//     currentIndex = 0;
-//   } else {
-//     currentIndex++;
-//   }
-//   setActiveImage(images[currentIndex]);
-// })
-
 
 //////////////////// HAMBURGER MENU ///////////////
 const menuToggle = document.querySelector('.ham-btn');
@@ -102,3 +74,11 @@ window.onscroll = () => {
     closeMenu();
   }
 }
+
+//on click load animations
+const postButton = document.querySelector('.post-link-1');
+
+postButton.addEventListener('click', function slideIntoView() {
+  postButton.classList.add('button');
+  console.log('clicked!');
+})
